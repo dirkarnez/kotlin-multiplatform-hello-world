@@ -19,7 +19,7 @@ jobs:
       run: |
         chmod +x ./gradlew && \
         ./gradlew -q :tasks --all && \
-        ./gradlew assemble
+        ./gradlew composeApp:build 
 
 # .\build\bin\native\
     - run: |
