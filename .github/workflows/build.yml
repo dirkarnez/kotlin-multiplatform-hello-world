@@ -19,19 +19,24 @@ jobs:
       with:
        distribution: 'adopt'
        java-version: '17'
-
-# ./gradlew --no-daemon assembleRelease
-    - name: Build the project
-      run: |
-        chmod +x ./gradlew && \
-        ./gradlew -q :tasks --all && \
-        ./gradlew shared:build && \
-        ./gradlew composeApp:build
+       
 
     - name: Set up cocoapods
       uses: maxim-lobanov/setup-cocoapods@v1.4.0
       with:
         version: latest
+        
+# ./gradlew --no-daemon assembleRelease
+    - name: Build the project
+      run: |
+        chmod +x ./gradlew && \
+        ./gradlew -q :tasks --all && \
+        ./gradlew build && \
+      
+        # ./gradlew shared:build && \
+        # ./gradlew composeApp:build && \
+        # compileKotlinIosX64
+
 
     # - shell: bash
     #   name: Install Dependencies
@@ -39,8 +44,8 @@ jobs:
     #     cd iosApp
     #     pod install --verbose
         
-    - run: |
-        xcodebuild build -workspace iosApp/iosApp.xcworkspace -configuration Debug -scheme iosApp -sdk iphoneos -destination name='iPhone 14' -verbose
+    # - run: |
+    #     xcodebuild build -workspace iosApp/iosApp.xcworkspace -configuration Debug -scheme iosApp -sdk iphoneos -destination name='iPhone 14' -verbose
 
 # .\build\bin\native\
     - run: |
