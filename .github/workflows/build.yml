@@ -18,6 +18,7 @@ jobs:
     - name: Build the project
       run: |
         chmod +x ./gradlew && \
+        ./gradlew -q :tasks --all && \
         ./gradlew assemble
 
 # .\build\bin\native\
