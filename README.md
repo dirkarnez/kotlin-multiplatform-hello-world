@@ -5,6 +5,7 @@ kotlin-multiplatform-hello-world
 - [Kotlin Multiplatform Wizard | JetBrains](https://kmp.jetbrains.com/)
 
 ### Tutorials
+- [Building Your First Compose Multiplatform Hello World App - KMP for Beginners - YouTube](https://www.youtube.com/watch?v=vvP5vnmzY84)
 - [Create an iOS simulator build](https://help.perfecto.io/perfecto-help/content/perfecto/automation-testing/create_an_ios_simulator_build.htm)
 - [Set up an environment | Kotlin Multiplatform Development Documentation](https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-setup.html)
 - [Make your Android application work on iOS – tutorial | Kotlin Multiplatform Development Documentation](https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-integrate-in-existing-app.html#what-s-next)
@@ -18,6 +19,7 @@ kotlin-multiplatform-hello-world
 - [rjaros/kilua: Composable web framework for Kotlin/Wasm and Kotlin/JS](https://github.com/rjaros/kilua)
 - [AKJAW/kotlin-multiplatform-github-actions: Repository showcasing GitHub Actions for Kotlin Multiplatform](https://github.com/AKJAW/kotlin-multiplatform-github-actions)
 - [JetBrains/compose-multiplatform-template: Compose Multiplatform Application project template](https://github.com/JetBrains/compose-multiplatform-template)
+- [kuroski/kmp-expense-tracker: Series: Building a subscription tracker Desktop and iOS app with compose multiplatform](https://github.com/kuroski/kmp-expense-tracker)
 
 ### Awesomeness
 - [terrakok/kmp-awesome: An awesome list that curates the best Kotlin Multiplatform libraries, tools and more.](https://github.com/terrakok/kmp-awesome)
