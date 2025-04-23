@@ -19,3 +19,7 @@ jobs:
       run: |
         chmod +x ./gradlew && \
         ./gradlew assemble
+
+# .\build\bin\native\
+    - run: |
+        ls -R
