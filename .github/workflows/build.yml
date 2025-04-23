@@ -25,7 +25,22 @@ jobs:
       run: |
         chmod +x ./gradlew && \
         ./gradlew -q :tasks --all && \
-        ./gradlew composeApp:build 
+        ./gradlew shared:build && \
+        ./gradlew composeApp:build
+
+    - name: Set up cocoapods
+      uses: maxim-lobanov/setup-cocoapods@v1.4.0
+      with:
+        version: latest
+
+    - shell: bash
+      name: Install Dependencies
+      run: |
+        cd iosApp
+        pod install --verbose
+        
+    - run: |
+        xcodebuild build -workspace iosApp/iosApp.xcworkspace -configuration Debug -scheme iosApp -sdk iphoneos -destination name='iPhone 14' -verbose
 
 # .\build\bin\native\
     - run: |
@@ -41,6 +56,7 @@ jobs:
     - name: Release prebuilt
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "composeApp/build/outputs/apk/debug/composeApp-debug.apk"
+        artifacts: |
+          "composeApp/build/outputs/apk/debug/composeApp-debug.apk"
         allowUpdates: true
         token: ${{ secrets.GITHUB_TOKEN }}
